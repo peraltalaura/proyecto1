@@ -1,0 +1,51 @@
+version: "3.7"
+
+# Define services/containers
+services:
+  # Web service
+  www:
+    build: 
+      context: ./docker/apache
+    ports: 
+        - "8001:80"
+    volumes:
+        - ./www:/var/www/html/
+    links:
+        - mysql
+    networks:
+        - nire-sarea
+
+  # MySQL container
+  mysql:
+    image: mysql:8.0.19
+    ports: 
+      - "3306:3306"
+    networks:
+      - nire-sarea
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: bdweb
+    volumes:
+      - ./dump:/docker-entrypoint-initdb.d
+      - ./conf:/etc/mysql/conf.d
+      - persistent:/var/lib/mysql
+
+  # phpMyAdmin container
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.2
+    networks:
+      - nire-sarea
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+    depends_on:
+      - mysql
+
+# Define networks
+networks:
+  nire-sarea:
+
+# Define volumes
+volumes:
+  persistent:
