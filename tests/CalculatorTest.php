@@ -1,21 +1,10 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-use App\Calculator;
+include "docker-compose/conf.php";
+include "docker-compose/includes/mysql.php";
 
-class CalculatorTest extends TestCase
-{
-    public function testAddOperation(): void
-    {
-        $adder = new Calculator("add");
-        $value = $adder->evaluate(2, 3);
-        $this->assertEquals($value, 5);
-    }
+$creds = mysqli_query($conx,"SELECT * FROM users WHERE username='". $username ."'");
 
-    public function testSubtractOperation(): void
-    {
-        $adder = new Calculator("subtract");
-        $value = $adder->evaluate(2, 3);
-        $this->assertEquals($value, -1);
-    }
-}
+$creds = mysqli_fetch_array($creds);
+
+?>
