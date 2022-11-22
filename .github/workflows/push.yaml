@@ -5,7 +5,8 @@ on:
       - 'docker-compose'
       - 'docker-compose/**'
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - run: |
-        echo The PR was pushed
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo The PR was pushed
