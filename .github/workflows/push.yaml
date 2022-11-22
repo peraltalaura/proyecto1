@@ -1,0 +1,11 @@
+name: CI push
+on: 
+  push:
+    branches: 
+      - 'docker-compose'
+      - 'docker-compose/**'
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - run: |
+        echo The PR was pushed
