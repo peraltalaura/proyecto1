@@ -1,4 +1,4 @@
 # proyecto1 
 
-#Docker-compose
-#Host-cron 
+Docker-compose
+Host-cron 
