@@ -13,8 +13,8 @@ jobs:
       - name: Install composer and dependencies
         uses: php-actions/composer@v6
 
-      - name: PHPUnit Tests
-        uses: php-actions/phpunit@v3
+      #- name: PHPUnit Tests
+        #uses: php-actions/phpunit@v3
         env:
           TEST_NAME: docker-compose/www
           XDEBUG_MODE: coverage
