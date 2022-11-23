@@ -1,6 +1,5 @@
 <?php
 
-    include("conf.php");
     include("mysql.php");
     $creds = mysqli_query($conx,"SELECT * FROM users");
 
