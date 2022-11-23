@@ -24,12 +24,12 @@
             $this->assertEquals($resultado, false);
         }
 
-        public function testuaDa(){
+        public function testtestuaDa(){
             $nombres="/^[a-zA-ZñáéíóúÁÉÍÓÚäëïöüÄËÏÖÜ\s]+$/";
             $testua="abcdse7847aldfjla";
             $resultado=false;
             if(!preg_match($nombres,$testua)){
-                return true;
+                $resultado= true;
             }
     
             $this->assertEquals($resultado, true);
