@@ -1,8 +1,8 @@
 <?php
 
     use PHPUnit\Framework\TestCase;
-    use App/conf.php;
-    use App/includes/mysql.php;
+    use App\conf.php;
+    use App\includes\mysql.php;
 
     $creds = mysqli_query($conx,"SELECT * FROM users");
 
