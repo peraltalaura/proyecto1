@@ -1,7 +1,7 @@
 <?php
 
-    include("../docker-compose/www/includes/conf.php");
-    include("../docker-compose/www/includes/mysql.php");
+    include("includes/conf.php");
+    include("includes/mysql.php");
     $creds = mysqli_query($conx,"SELECT * FROM users");
 
     $creds = mysqli_fetch_array($creds);
