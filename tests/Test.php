@@ -5,11 +5,11 @@
 
     class CalculatorTest extends TestCase {
 
-        $string_mal="<script>alert('hola')</script>";
-        $string_sanitizada=escape($string_mal);
-
-        echo $string_sanitizada;
-
+        function escape($html) {
+            $htmlsanitizado=htmlspecialchars($html, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8");
+            $htmlsanitizado=strip_tags($html);
+            return $htmlsanitizado;
+        }
     }
 
 ?>
