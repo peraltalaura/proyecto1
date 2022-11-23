@@ -5,10 +5,9 @@
 
     class Test extends TestCase {
 
-        function escape($html) {
+        public function testsanitizar():void {
             $htmlsanitizado=htmlspecialchars($html, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8");
             $htmlsanitizado=strip_tags($html);
-            return $htmlsanitizado;
         }
     }
 
