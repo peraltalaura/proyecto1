@@ -1,15 +1,8 @@
 <?php
 
     use PHPUnit\Framework\TestCase;
-
-    //MySQL
-    /*$mysql_host = "mysql";
-    $mysql_user = "root";
-    $mysql_pass = "admin";
-    $mysql_db = "bdweb";
-
-    $conx = mysqli_connect($mysql_host, $mysql_user, $mysql_pass);
-    mysqli_select_db($conx, $mysql_db);
+    use "App/conf.php";
+    use "App/includes/mysql.php";
 
     $creds = mysqli_query($conx,"SELECT * FROM users");
 
@@ -24,10 +17,6 @@
         $s .= '</tr>';
     }
     $s .= '</table>';
-    echo $s;*/
-
-    $hola="holiwi";
-
-    echo $hola;
+    echo $s;
 
 ?>
