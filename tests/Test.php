@@ -1,11 +1,20 @@
 <?php
 
-    include "C:\Users\peralta.laura\Documents\proyecto1\docker-compose\www\includes\funtzioak.php";
+    include("../docker-compose/www/includes/conf.php");
+    include("../docker-compose/www/includes/mysql.php");
+    $creds = mysqli_query($conx,"SELECT * FROM users");
 
-    if(userExists("admin@bdweb")){
-        echo "Konexioa ondo";
-    } else {
-        echo "Ez dago konexiorik";
+    $creds = mysqli_fetch_array($creds);
+
+    $s = '<table border="1">';
+    foreach ($creds as $cred) {
+        $s .= '<tr>';
+        foreach ( $cred as $c ) {
+                $s .= '<td>'.$c.'</td>';
+        }
+        $s .= '</tr>';
     }
+    $s .= '</table>';
+    echo $s;
 
 ?>
