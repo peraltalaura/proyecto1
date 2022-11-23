@@ -3,7 +3,7 @@
     use PHPUnit\Framework\TestCase;
 
     //MySQL
-    $mysql_host = "mysql";
+    /*$mysql_host = "mysql";
     $mysql_user = "root";
     $mysql_pass = "admin";
     $mysql_db = "bdweb";
@@ -24,6 +24,10 @@
         $s .= '</tr>';
     }
     $s .= '</table>';
-    echo $s;
+    echo $s;*/
+
+    $hola="holiwi";
+
+    echo $hola;
 
 ?>
