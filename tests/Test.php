@@ -13,7 +13,7 @@
         }
 
         public function testirudiaDa(){
-            $irudia="imagen.jpg"
+            $irudia="imagen.jpg";
             $allowed=array('jpg','png');
             $ext=pathinfo($irudia,PATHINFO_EXTENSION);
             $resultado=false;
@@ -24,7 +24,7 @@
             $this->assertEquals($resultado, false);
         }
 
-        function testuaDa(){
+        public function testuaDa(){
             $nombres="/^[a-zA-ZñáéíóúÁÉÍÓÚäëïöüÄËÏÖÜ\s]+$/";
             $testua="abcdse7847aldfjla";
             $resultado=false;
