@@ -1,22 +1,12 @@
 <?php
 
     use PHPUnit\Framework\TestCase;
-    use App\conf;
-    use App\includes\mysql;
+    use App\includes\funtzioak;
 
-    $creds = mysqli_query($conx,"SELECT * FROM users");
+    $string_mal="<script>alert('hola')</script>";
+    $string_sanitizada=escape($string_mal);
 
-    $creds = mysqli_fetch_array($creds);
-
-    $s = '<table border="1">';
-    foreach ($creds as $cred) {
-        $s .= '<tr>';
-        foreach ( $cred as $c ) {
-                $s .= '<td>'.$c.'</td>';
-        }
-        $s .= '</tr>';
-    }
-    $s .= '</table>';
-    echo $s;
+    echo $string_mal;
+    echo $string_sanitizada;
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-    namespace App;
+
     //MySQL
     $mysql_host = "mysql";
     $mysql_user = "root";
