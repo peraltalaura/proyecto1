@@ -5,11 +5,34 @@
 
     class Test extends TestCase {
 
-        public function testsanitizar():void {
+        public function testsanitizar() {
             $html="<script>alert('test')</script>";
             $htmlsanitizado=htmlspecialchars($html, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8");
             $htmlsanitizado=strip_tags($html);
             $this->assertEquals($htmlsanitizado, "alert('test')");
+        }
+
+        public function testirudiaDa(){
+            $irudia="imagen.jpg"
+            $allowed=array('jpg','png');
+            $ext=pathinfo($irudia,PATHINFO_EXTENSION);
+            $resultado=false;
+            if(!in_array($ext,$allowed)){
+                $resultado=true;
+            }
+            
+            $this->assertEquals($resultado, false);
+        }
+
+        function testuaDa(){
+            $nombres="/^[a-zA-ZñáéíóúÁÉÍÓÚäëïöüÄËÏÖÜ\s]+$/";
+            $testua="abcdse7847aldfjla";
+            $resultado=false;
+            if(!preg_match($nombres,$testua)){
+                return true;
+            }
+    
+            $this->assertEquals($resultado, true);
         }
     }
 
