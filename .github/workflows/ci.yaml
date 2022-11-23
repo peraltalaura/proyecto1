@@ -16,7 +16,7 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
         env:
-          TEST_NAME: docker-compose/www
+          TEST_NAME: tests/Test.php
           XDEBUG_MODE: coverage
         with:
           bootstrap: vendor/autoload.php
