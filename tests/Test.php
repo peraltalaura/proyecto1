@@ -1,5 +1,7 @@
 <?php
 
+    use PHPUnit\Framework\TestCase;
+
     //MySQL
     $mysql_host = "mysql";
     $mysql_user = "root";
