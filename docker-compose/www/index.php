@@ -3,7 +3,7 @@ session_start();
 
 include("conf.php");
 include("includes/mysql.php");
-include("includes/funtzioak.php");
+include_once("includes/funtzioak.php");
 
 ?>
 

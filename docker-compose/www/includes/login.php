@@ -8,7 +8,6 @@ if(isset($_SESSION['admin']) && ($_SESSION['admin']==1)){
 }
 else{
     if(isset($_POST['submit'])){
-      echo escape($_POST['username']);
       if((!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", escape($_POST['username']))) && (escape($_POST['username'])!="admin@bdweb")){
           header("Location: ".$_SERVER['PHP_SELF']."?action=login");
       } else {

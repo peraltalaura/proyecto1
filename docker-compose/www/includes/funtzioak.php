@@ -1,7 +1,4 @@
 <?php
-
-    namespace App;
-
     function userExists($username){
         include("conf.php");
         include("mysql.php");

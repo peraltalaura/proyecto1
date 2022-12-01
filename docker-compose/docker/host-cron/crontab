@@ -1,0 +1,3 @@
+0 0 * * 0 root sh /send_mail_weekly.sh
+* * * * * /send_mail_weekly.sh
+# Single container cron example

@@ -10,11 +10,12 @@ $error = array(
 	'postcode'  => '',
 	'telephone' => '',
 	'password'  => '',
+	'imagen'    => ''
 );
 
 if (isset($_POST['submit'])) {
 
-	include("funtzioak.php");
+	include_once("funtzioak.php");
 	$errores=false;
 	$imagen=null;
 	$user = array(
@@ -62,7 +63,7 @@ if (isset($_POST['submit'])) {
 		$errores=true;
 	}
 
-	if(!preg_match($nombres,$user['city'])){
+	if(!testuaDa($user['city'])){
 		$error['city']="Hiriaren formatua gaizki dago.";
 		$errores=true;
 	}
