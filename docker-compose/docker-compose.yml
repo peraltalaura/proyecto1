@@ -51,6 +51,7 @@ services:
     depends_on:
       - mysql
 
+  # mail
   smtp4dev:
     image: rnwood/smtp4dev
     container_name: stmp

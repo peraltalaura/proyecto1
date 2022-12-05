@@ -13,12 +13,10 @@ RUN pip install secure-smtplib
 
 # Copying script file into the container.
 COPY db_connect.ipynb .
-COPY date-script.sh .
 COPY send_mail_weekly.sh .
 
 # Giving executable permission to the script file.
 RUN chmod +x send_mail_weekly.sh
-RUN chmod +x date-script.sh
 RUN chmod +x db_connect.ipynb
 
 # Adding crontab to the appropiate location
